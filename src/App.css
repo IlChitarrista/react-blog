@@ -1,0 +1,111 @@
+:root {
+  --background: #264653;
+  --background2: #2a9d8f;
+  --selection: #e9c46a;
+  --selection2: #f4a261;
+  --jolly: #e76f51;
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: Calistoga;
+}
+
+p {
+  font-family: Atkinson Hyperlegible;
+}
+
+#signature {
+  font-family: Courgette;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3vw;
+  margin-top: 0;
+  padding: 0.5em;
+}
+
+#title {
+  background: linear-gradient(
+    90deg,
+    var(--selection2) 0%,
+    var(--selection) 50%,
+    var(--jolly) 100%
+  );
+  margin-bottom: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  width: 700px;
+  margin: auto;
+}
+
+.container > h2 {
+  color: var(--selection2);
+  width: 532px;
+  margin-bottom: 0;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.75);
+}
+
+.preTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preTitle button {
+  width: 70px;
+  height: 70px;
+  border-radius: 1em;
+  background-color: var(--jolly);
+  border: none;
+  align-self: center;
+  font-size: large;
+}
+
+.preTitle :last-child {
+  text-align: right;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.75);
+}
+
+.card {
+  width: 500px;
+  background-color: var(--background2);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.markdown {
+  background-color: var(--background2);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.post {
+  padding: 0 1em 1em 1em;
+}
+
+.post h2,
+.post h3,
+.post h4 {
+  color: var(--selection2);
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
