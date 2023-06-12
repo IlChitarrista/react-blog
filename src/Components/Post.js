@@ -1,5 +1,5 @@
 import Title from "./Title";
-// import Link from "./Components/Link";
+import Link from "./Link";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useEffect, useState } from "react";
 
@@ -10,7 +10,7 @@ const Post = ({ post, setSelectedPost }) => {
     fetch(`/Markdown/${post.md}.md`)
       .then((response) => response.text())
       .then((text) => setMarkdown(text));
-  }, []);
+  }, [post.md]);
   return (
     <div className="post">
       <div className="preTitle">
@@ -22,7 +22,7 @@ const Post = ({ post, setSelectedPost }) => {
           <h2>{post.author}</h2>
         </div>
       </div>
-      <ReactMarkdown className="markdown" components={{ h1: Title }}>
+      <ReactMarkdown className="markdown" components={{ h1: Title, a: Link }}>
         {markdown}
       </ReactMarkdown>
       <h3 id="signature">{post.author}</h3>

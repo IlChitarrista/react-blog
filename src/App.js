@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./App.css";
 import Container from "./Components/Container";
-import Post from "./Components/Post";
 import data from "./data";
 
 function App() {

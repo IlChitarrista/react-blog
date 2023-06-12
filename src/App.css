@@ -18,6 +18,7 @@ h5,
 h6,
 button {
   font-family: Calistoga;
+  user-select: none;
 }
 
 p {
@@ -75,6 +76,7 @@ h1 {
   border: none;
   align-self: center;
   font-size: large;
+  cursor: pointer;
 }
 
 .preTitle :last-child {
@@ -87,6 +89,14 @@ h1 {
   background-color: var(--background2);
   padding: 1em;
   border-radius: 1em;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(105%) rotate(1deg);
+  transition: transform 0.2s ease-in-out;
 }
 
 .markdown {
